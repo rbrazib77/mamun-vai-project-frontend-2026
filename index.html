@@ -4,170 +4,822 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Servicesnap – Find the Perfect Professional</title>
+    <!-- Fontawesome CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
     <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Main Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- ────────────── NAVBAR ────────────── -->
-    <nav class="navbar">
-      <div class="container d-flex align-items-center justify-content-between">
-        <!-- Brand -->
-        <a href="#" class="navbar-brand">
-          <svg class="brand-icon" viewBox="0 0 34 34" fill="none">
-            <rect x="2" y="2" width="13" height="13" rx="3" fill="#6C3FE8" />
-            <rect
-              x="19"
-              y="2"
-              width="13"
-              height="13"
-              rx="3"
-              fill="#6C3FE8"
-              opacity="0.5"
-            />
-            <rect
-              x="2"
-              y="19"
-              width="13"
-              height="13"
-              rx="3"
-              fill="#6C3FE8"
-              opacity="0.5"
-            />
-            <rect
-              x="19"
-              y="19"
-              width="13"
-              height="13"
-              rx="3"
-              fill="#6C3FE8"
-              opacity="0.25"
-            />
-          </svg>
-          Servicesnap
-        </a>
-        <ul class="navbar-nav flex-row d-none d-lg-flex">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-        <!-- Desktop nav links -->
-        <div class="desktop-nav-items d-flex align-items-center gap-1">
-          <div class="search-wrap ms-2">
-            <span class="search-icon">
-              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
-                <circle
-                  cx="8.5"
-                  cy="8.5"
-                  r="5.5"
-                  stroke="#aaa"
-                  stroke-width="2"
-                />
-                <path
-                  d="M13 13L17 17"
-                  stroke="#aaa"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </span>
-            <input
-              type="text"
-              class="search-box"
-              placeholder="Search for services..."
-            />
+    <!-- ════════ STICKY HEADER ════════ -->
+    <!-- ════════ STICKY HEADER ════════ -->
+    <div id="site-header">
+      <div class="top-bar">
+        <div class="container">
+          <a href="#" class="logo-wrap">
+            <span class="logo-icon">🏪</span>
+            <span class="logo-bd">Snap</span><span class="logo-stall"></span>
+          </a>
+          <div class="search-wrap">
+            <input type="text" placeholder="Search products..." />
+            <button>Search</button>
           </div>
-
-          <button class="btn-login ms-2">Log in</button>
-          <button class="btn-seller ms-1">Become a Seller</button>
+          <div class="top-right">
+            <a href="#">
+              <button class="btn-login">Login</button>
+            </a>
+            <a href="#" class="btn-sell">Become Seller</a>
+          </div>
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <i class="bi bi-list"></i>
+          </button>
         </div>
-
-        <!-- Hamburger -->
-        <button class="navbar-toggler" id="hamburgerBtn" aria-label="Open menu">
-          <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </button>
-      </div>
-    </nav>
-
-    <!-- ────────────── DRAWER OVERLAY ────────────── -->
-    <div class="drawer-overlay" id="drawerOverlay"></div>
-
-    <!-- ────────────── MOBILE DRAWER ────────────── -->
-    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
-      <div class="drawer-header">
-        <a href="#" class="navbar-brand" style="font-size: 1.15rem">
-          <svg width="28" height="28" viewBox="0 0 34 34" fill="none">
-            <rect x="2" y="2" width="13" height="13" rx="3" fill="#6C3FE8" />
-            <rect
-              x="19"
-              y="2"
-              width="13"
-              height="13"
-              rx="3"
-              fill="#6C3FE8"
-              opacity="0.5"
-            />
-            <rect
-              x="2"
-              y="19"
-              width="13"
-              height="13"
-              rx="3"
-              fill="#6C3FE8"
-              opacity="0.5"
-            />
-            <rect
-              x="19"
-              y="19"
-              width="13"
-              height="13"
-              rx="3"
-              fill="#6C3FE8"
-              opacity="0.25"
-            />
-          </svg>
-          Servify
-        </a>
-        <button class="drawer-close" id="drawerClose" aria-label="Close menu">
-          ✕
-        </button>
       </div>
 
-      <div class="drawer-search mt-2">
-        <input type="text" placeholder="Search for services..." />
-      </div>
+      <!-- DESKTOP NAV -->
+      <nav class="nav-bar">
+        <div class="container">
+          <ul>
+            <!-- 1 Computer -->
+            <li>
+              <a href="#">Computer <i class="bi bi-chevron-down arrow"></i></a>
+              <ul class="dd1">
+                <li>
+                  <a href="#"
+                    >Laptop <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Gaming Laptop</a></li>
+                    <li><a href="#">Ultrabook</a></li>
+                    <li><a href="#">Business Laptop</a></li>
+                    <li><a href="#">Chromebook</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Desktop PC <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Gaming PC</a></li>
+                    <li><a href="#">All-in-One PC</a></li>
+                    <li><a href="#">Mini PC</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Monitor <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">LED Monitor</a></li>
+                    <li><a href="#">Gaming Monitor</a></li>
+                    <li><a href="#">4K Monitor</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Keyboard &amp; Mouse</a></li>
+                <li><a href="#">UPS &amp; Power</a></li>
+                <li><a href="#">RAM &amp; Storage</a></li>
+                <li><a href="#">Processor &amp; Motherboard</a></li>
+                <li><a href="#">Printer &amp; Scanner</a></li>
+              </ul>
+            </li>
 
-      <nav class="drawer-nav">
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+            <!-- 2 Electronics -->
+            <li>
+              <a href="#"
+                >Electronics <i class="bi bi-chevron-down arrow"></i
+              ></a>
+              <ul class="dd1">
+                <li>
+                  <a href="#"
+                    >Mobile Phone <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">iPhone</a></li>
+                    <li><a href="#">Xiaomi</a></li>
+                    <li><a href="#">Realme</a></li>
+                    <li><a href="#">Oppo / Vivo</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >TV &amp; Display
+                    <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Smart TV</a></li>
+                    <li><a href="#">LED TV</a></li>
+                    <li><a href="#">OLED TV</a></li>
+                    <li><a href="#">Projector</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Audio <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Earbuds / TWS</a></li>
+                    <li><a href="#">Headphones</a></li>
+                    <li><a href="#">Bluetooth Speaker</a></li>
+                    <li><a href="#">Sound Bar</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Smart Watch</a></li>
+                <li><a href="#">Tablet</a></li>
+                <li><a href="#">Camera &amp; DSLR</a></li>
+                <li><a href="#">Gaming Console</a></li>
+              </ul>
+            </li>
+
+            <!-- 3 Security -->
+            <li>
+              <a href="#"
+                >Security and Industry <i class="bi bi-chevron-down arrow"></i
+              ></a>
+              <ul class="dd1">
+                <li>
+                  <a href="#"
+                    >CCTV Camera <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">IP Camera</a></li>
+                    <li><a href="#">Dome Camera</a></li>
+                    <li><a href="#">Bullet Camera</a></li>
+                    <li><a href="#">PTZ Camera</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Access Control <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Fingerprint Device</a></li>
+                    <li><a href="#">Face Recognition</a></li>
+                    <li><a href="#">Card Reader</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">DVR / NVR</a></li>
+                <li><a href="#">Electric Fence</a></li>
+                <li><a href="#">Fire Safety</a></li>
+                <li><a href="#">Solar System</a></li>
+                <li><a href="#">Generator</a></li>
+              </ul>
+            </li>
+
+            <!-- 4 Travels -->
+            <li>
+              <a href="#">Travels <i class="bi bi-chevron-down arrow"></i></a>
+              <ul class="dd1">
+                <li>
+                  <a href="#"
+                    >Air Ticket <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Domestic</a></li>
+                    <li><a href="#">International</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Hotel Booking</a></li>
+                <li><a href="#">Tour Package</a></li>
+                <li><a href="#">Visa Assistance</a></li>
+                <li><a href="#">Travel Accessories</a></li>
+              </ul>
+            </li>
+
+            <!-- 5 Health & Beauty -->
+            <li>
+              <a href="#"
+                >Health &amp; Beauty <i class="bi bi-chevron-down arrow"></i
+              ></a>
+              <ul class="dd1">
+                <li>
+                  <a href="#"
+                    >Skin Care <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Face Wash</a></li>
+                    <li><a href="#">Moisturizer</a></li>
+                    <li><a href="#">Sunscreen</a></li>
+                    <li><a href="#">Serum</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Hair Care <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Shampoo</a></li>
+                    <li><a href="#">Hair Oil</a></li>
+                    <li><a href="#">Hair Dryer</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Supplement &amp; Nutrition</a></li>
+                <li><a href="#">Medical Equipment</a></li>
+                <li><a href="#">Personal Care</a></li>
+                <li><a href="#">Perfume &amp; Fragrance</a></li>
+              </ul>
+            </li>
+
+            <!-- 6 Household -->
+            <li>
+              <a href="#">Household <i class="bi bi-chevron-down arrow"></i></a>
+              <ul class="dd1">
+                <li>
+                  <a href="#"
+                    >Kitchen Appliance
+                    <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Rice Cooker</a></li>
+                    <li><a href="#">Blender</a></li>
+                    <li><a href="#">Microwave</a></li>
+                    <li><a href="#">Air Fryer</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Furniture <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Sofa</a></li>
+                    <li><a href="#">Bed</a></li>
+                    <li><a href="#">Wardrobe</a></li>
+                    <li><a href="#">Dining Table</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">AC &amp; Refrigerator</a></li>
+                <li><a href="#">Washing Machine</a></li>
+                <li><a href="#">Home Decor</a></li>
+                <li><a href="#">Cleaning Tools</a></li>
+              </ul>
+            </li>
+
+            <!-- 7 Car & Bike -->
+            <li>
+              <a href="#"
+                >Car &amp; Bike <i class="bi bi-chevron-down arrow"></i
+              ></a>
+              <ul class="dd1">
+                <li>
+                  <a href="#"
+                    >Car <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Sedan</a></li>
+                    <li><a href="#">SUV</a></li>
+                    <li><a href="#">Microbus</a></li>
+                    <li><a href="#">Pickup</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Motorcycle <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Hero</a></li>
+                    <li><a href="#">Bajaj</a></li>
+                    <li><a href="#">Yamaha</a></li>
+                    <li><a href="#">Honda</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Car Accessories</a></li>
+                <li><a href="#">Bike Accessories</a></li>
+                <li><a href="#">Electric Vehicle</a></li>
+                <li><a href="#">Three Wheeler / CNG</a></li>
+              </ul>
+            </li>
+
+            <!-- 8 Real Estate -->
+            <li>
+              <a href="#"
+                >Real Estate <i class="bi bi-chevron-down arrow"></i
+              ></a>
+              <ul class="dd1">
+                <li>
+                  <a href="#"
+                    >Apartment <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Buy Apartment</a></li>
+                    <li><a href="#">Rent Apartment</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Land / Plot <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Residential Plot</a></li>
+                    <li><a href="#">Commercial Land</a></li>
+                    <li><a href="#">Agricultural Land</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Commercial Space</a></li>
+                <li><a href="#">House for Sale</a></li>
+                <li><a href="#">House for Rent</a></li>
+              </ul>
+            </li>
+
+            <!-- 9 More -->
+            <li>
+              <a href="#">More <i class="bi bi-chevron-down arrow"></i></a>
+              <ul class="dd1">
+                <li>
+                  <a href="#"
+                    >Sports &amp; Fitness
+                    <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">Cricket</a></li>
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Gym Equipment</a></li>
+                    <li><a href="#">Cycling</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Books &amp; Education
+                    <i class="bi bi-chevron-right sub-arrow"></i
+                  ></a>
+                  <ul class="dd2">
+                    <li><a href="#">School Books</a></li>
+                    <li><a href="#">Admission Guide</a></li>
+                    <li><a href="#">Online Course</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Baby &amp; Kids</a></li>
+                <li><a href="#">Pet Supplies</a></li>
+                <li><a href="#">Agriculture</a></li>
+                <li><a href="#">Office Supplies</a></li>
+                <li><a href="#">Jobs &amp; Services</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </nav>
+    </div>
+    <!-- /site-header -->
 
-      <div class="drawer-footer">
-        <a href="#" class="btn-login-full">Log in</a>
-        <a href="#" class="btn-seller-full">Become a Seller</a>
+    <!-- ════════ OFF-CANVAS (RIGHT SIDE, MOBILE) ════════ -->
+    <div class="offcanvas-overlay" id="overlay"></div>
+    <div class="offcanvas-menu" id="offcanvasMenu">
+      <div class="offcanvas-head">
+        <span>🏪 Snap</span>
+        <button class="offcanvas-close" id="closeBtn">&times;</button>
       </div>
-    </aside>
 
-    <!-- ────────────── HERO SECTION ────────────── -->
+      <div class="offcanvas-search">
+        <input type="text" placeholder="Search products..." />
+        <button>Go</button>
+      </div>
+
+      <ul class="mob-nav">
+        <!-- Computer -->
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-pc-display micon"></i>Computer</span
+            ><i class="bi bi-chevron-right marrow"></i>
+          </button>
+          <ul class="mob-sub1">
+            <li>
+              <button class="mob-lv2">
+                <span>Laptop</span><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Gaming Laptop</a></li>
+                <li><a href="#">Ultrabook</a></li>
+                <li><a href="#">Business Laptop</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2">
+                <span>Desktop PC</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Gaming PC</a></li>
+                <li><a href="#">All-in-One PC</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Monitor</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Keyboard &amp; Mouse</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>RAM &amp; Storage</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Printer &amp; Scanner</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Electronics -->
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-phone micon"></i>Electronics</span
+            ><i class="bi bi-chevron-right marrow"></i>
+          </button>
+          <ul class="mob-sub1">
+            <li>
+              <button class="mob-lv2">
+                <span>Mobile Phone</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Samsung</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Xiaomi</a></li>
+                <li><a href="#">Realme</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2">
+                <span>TV &amp; Display</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Smart TV</a></li>
+                <li><a href="#">LED TV</a></li>
+                <li><a href="#">OLED TV</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2">
+                <span>Audio</span><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Earbuds / TWS</a></li>
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">Bluetooth Speaker</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Smart Watch</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Tablet</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Camera &amp; DSLR</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Security -->
+        <li>
+          <button class="mob-lv1">
+            <span
+              ><i class="bi bi-shield-check micon"></i>Security &amp;
+              Industry</span
+            ><i class="bi bi-chevron-right marrow"></i>
+          </button>
+          <ul class="mob-sub1">
+            <li>
+              <button class="mob-lv2">
+                <span>CCTV Camera</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">IP Camera</a></li>
+                <li><a href="#">Dome Camera</a></li>
+                <li><a href="#">Bullet Camera</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2">
+                <span>Access Control</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Fingerprint Device</a></li>
+                <li><a href="#">Face Recognition</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>DVR / NVR</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Solar System</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Generator</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Travels -->
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-airplane micon"></i>Travels</span
+            ><i class="bi bi-chevron-right marrow"></i>
+          </button>
+          <ul class="mob-sub1">
+            <li>
+              <button class="mob-lv2">
+                <span>Air Ticket</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Domestic</a></li>
+                <li><a href="#">International</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Hotel Booking</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Tour Package</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Visa Assistance</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Health & Beauty -->
+        <li>
+          <button class="mob-lv1">
+            <span
+              ><i class="bi bi-heart-pulse micon"></i>Health &amp; Beauty</span
+            ><i class="bi bi-chevron-right marrow"></i>
+          </button>
+          <ul class="mob-sub1">
+            <li>
+              <button class="mob-lv2">
+                <span>Skin Care</span><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Face Wash</a></li>
+                <li><a href="#">Moisturizer</a></li>
+                <li><a href="#">Sunscreen</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2">
+                <span>Hair Care</span><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Shampoo</a></li>
+                <li><a href="#">Hair Oil</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Supplement &amp; Nutrition</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Medical Equipment</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Perfume &amp; Fragrance</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Household -->
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-house micon"></i>Household</span
+            ><i class="bi bi-chevron-right marrow"></i>
+          </button>
+          <ul class="mob-sub1">
+            <li>
+              <button class="mob-lv2">
+                <span>Kitchen Appliance</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Rice Cooker</a></li>
+                <li><a href="#">Blender</a></li>
+                <li><a href="#">Air Fryer</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2">
+                <span>Furniture</span><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Sofa</a></li>
+                <li><a href="#">Bed</a></li>
+                <li><a href="#">Wardrobe</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>AC &amp; Refrigerator</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Washing Machine</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Home Decor</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Car & Bike -->
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-bicycle micon"></i>Car &amp; Bike</span
+            ><i class="bi bi-chevron-right marrow"></i>
+          </button>
+          <ul class="mob-sub1">
+            <li>
+              <button class="mob-lv2">
+                <span>Car</span><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Sedan</a></li>
+                <li><a href="#">SUV</a></li>
+                <li><a href="#">Microbus</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2">
+                <span>Motorcycle</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Hero</a></li>
+                <li><a href="#">Bajaj</a></li>
+                <li><a href="#">Yamaha</a></li>
+                <li><a href="#">Honda</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Car Accessories</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Electric Vehicle</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Three Wheeler / CNG</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Real Estate -->
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-building micon"></i>Real Estate</span
+            ><i class="bi bi-chevron-right marrow"></i>
+          </button>
+          <ul class="mob-sub1">
+            <li>
+              <button class="mob-lv2">
+                <span>Apartment</span><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Buy Apartment</a></li>
+                <li><a href="#">Rent Apartment</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2">
+                <span>Land / Plot</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Residential Plot</a></li>
+                <li><a href="#">Commercial Land</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>House for Sale</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>House for Rent</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Commercial Space</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+
+        <!-- More -->
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-grid micon"></i>More</span
+            ><i class="bi bi-chevron-right marrow"></i>
+          </button>
+          <ul class="mob-sub1">
+            <li>
+              <button class="mob-lv2">
+                <span>Sports &amp; Fitness</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">Cricket</a></li>
+                <li><a href="#">Football</a></li>
+                <li><a href="#">Gym Equipment</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2">
+                <span>Books &amp; Education</span
+                ><i class="bi bi-chevron-right marrow"></i>
+              </button>
+              <ul class="mob-sub2">
+                <li><a href="#">School Books</a></li>
+                <li><a href="#">Admission Guide</a></li>
+                <li><a href="#">Online Course</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Baby &amp; Kids</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Pet Supplies</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Agriculture</span>
+              </button>
+            </li>
+            <li>
+              <button class="mob-lv2" style="justify-content: flex-start">
+                <span>Jobs &amp; Services</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button class="mob-lv1 mob-sell">
+            <span><i class="bi bi-tag micon"></i>Sell Item</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-person micon"></i>Login</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ────────────── Hero Section Start ────────────── -->
     <section class="hero-section">
       <div class="container">
         <div class="row align-items-center">
@@ -198,7 +850,9 @@
         </div>
       </div>
     </section>
+    <!-- ────────────── Hero Section End ──────────────── -->
 
+    <!-- ────────────── Service Section Start ─────────── -->
     <div class="service-section">
       <div class="container">
         <div class="sec-head">
@@ -391,12 +1045,15 @@
         </div>
       </div>
     </div>
+    <!-- ────────────── Service Section End ───────────── -->
+
+    <!-- ───────── Service Provider Section Start ──────── -->
     <div class="service-provider">
       <div class="container">
         <div
           class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3"
         >
-          <h2 class="sec-title">Top Rated Providers</h2>
+          <h2 class="sec-title">Service Providers</h2>
 
           <div class="d-flex align-items-center gap-3">
             <!-- Prev / Next arrows -->
@@ -450,7 +1107,7 @@
                 />
                 <div class="provider-name">Emily R.</div>
                 <div class="provider-role">Senior Web Developer</div>
-               
+
                 <button class="btn-view-profile">View Profile</button>
               </div>
             </div>
@@ -465,7 +1122,7 @@
                 />
                 <div class="provider-name">Marcus T.</div>
                 <div class="provider-role">SEO Specialist</div>
-                
+
                 <button class="btn-view-profile">View Profile</button>
               </div>
             </div>
@@ -480,7 +1137,7 @@
                 />
                 <div class="provider-name">Chloe K.</div>
                 <div class="provider-role">UI/UX Designer</div>
-               
+
                 <button class="btn-view-profile">View Profile</button>
               </div>
             </div>
@@ -495,7 +1152,7 @@
                 />
                 <div class="provider-name">David S.</div>
                 <div class="provider-role">Master Plumber</div>
-               
+
                 <button class="btn-view-profile">View Profile</button>
               </div>
             </div>
@@ -510,7 +1167,7 @@
                 />
                 <div class="provider-name">Sarah M.</div>
                 <div class="provider-role">Content Strategist</div>
-               
+
                 <button class="btn-view-profile">View Profile</button>
               </div>
             </div>
@@ -525,7 +1182,7 @@
                 />
                 <div class="provider-name">James L.</div>
                 <div class="provider-role">DevOps Engineer</div>
-               
+
                 <button class="btn-view-profile">View Profile</button>
               </div>
             </div>
@@ -533,14 +1190,14 @@
         </div>
       </div>
     </div>
+    <!-- ───────── Service Provider Section End ──────── -->
 
+    <!-- ───────────── Footer Section Start ──────────── -->
     <footer class="site-footer">
       <div class="container">
         <div class="row">
-          <!-- Brand + Tagline -->
           <div class="col-12 col-md-12 col-lg-4 footer-brand-col mb-4 mb-lg-0">
             <div class="footer-brand">
-              <!-- Layered stack SVG icon -->
               <svg
                 class="stack-icon"
                 viewBox="0 0 32 32"
@@ -578,7 +1235,6 @@
             </p>
           </div>
 
-          <!-- Spacer on large screens -->
           <div class="col-lg-1 d-none d-lg-block"></div>
 
           <!-- Platform -->
@@ -617,7 +1273,7 @@
 
         <!-- Bottom Bar -->
         <div class="footer-bottom">
-          <p>&copy; 2025 Servicesnap. All rights reserved.</p>
+          <p>&copy; 2026 Servicesnap. All rights reserved.</p>
           <div class="d-flex gap-3 flex-wrap">
             <a href="#">Privacy Policy</a>
             <a href="#">Cookie Policy</a>
@@ -625,50 +1281,9 @@
         </div>
       </div>
     </footer>
+    <!-- ───────────── Footer Section End ──────────── -->
 
-    <script>
-      const hamburgerBtn = document.getElementById("hamburgerBtn");
-      const hamburger = document.getElementById("hamburger");
-      const drawer = document.getElementById("mobileDrawer");
-      const overlay = document.getElementById("drawerOverlay");
-      const drawerClose = document.getElementById("drawerClose");
-
-      function openDrawer() {
-        drawer.classList.add("open");
-        overlay.classList.add("active");
-        hamburger.classList.add("open");
-        drawer.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeDrawer() {
-        drawer.classList.remove("open");
-        overlay.classList.remove("active");
-        hamburger.classList.remove("open");
-        drawer.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-      }
-
-      hamburgerBtn.addEventListener("click", () => {
-        drawer.classList.contains("open") ? closeDrawer() : openDrawer();
-      });
-
-      drawerClose.addEventListener("click", closeDrawer);
-      overlay.addEventListener("click", closeDrawer);
-
-      // Close on ESC
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeDrawer();
-      });
-
-      // Close drawer on nav link click (mobile)
-      drawer
-        .querySelectorAll(".drawer-nav a, .drawer-footer a")
-        .forEach((link) => {
-          link.addEventListener("click", closeDrawer);
-        });
-    </script>
-    <!-- Back to Top Button -->
+    <!-- ───────────── Back to Top Button ───────────── -->
     <button id="backToTop" aria-label="Back to top">
       <svg
         viewBox="0 0 24 24"
@@ -682,46 +1297,11 @@
       </svg>
     </button>
 
-    <script>
-      const btn = document.getElementById("backToTop");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 200) {
-          btn.classList.add("show");
-        } else {
-          btn.classList.remove("show");
-        }
-      });
-
-      btn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    </script>
+    <!-- Bootstrap 5 JS -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".providers-swiper", {
-        loop: true,
-        grabCursor: true,
-        spaceBetween: 24,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          prevEl: "#provPrev",
-          nextEl: "#provNext",
-        },
-        breakpoints: {
-          0: { slidesPerView: 1, spaceBetween: 16 },
-          480: { slidesPerView: 1.3, spaceBetween: 16 },
-          640: { slidesPerView: 2, spaceBetween: 20 },
-          900: { slidesPerView: 3, spaceBetween: 24 },
-          1200: { slidesPerView: 4, spaceBetween: 24 },
-        },
-      });
-    </script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
     <script src="assets/js/custom.js"></script>
   </body>
 </html>

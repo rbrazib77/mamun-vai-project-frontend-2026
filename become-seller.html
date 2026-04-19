@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicesnap – Find the Perfect Professional</title>
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Main Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ────────────── Navbar Section Start ──────────── -->
+    <nav class="navbar">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Brand -->
+        <a href="#" class="navbar-brand">
+          <svg class="brand-icon" viewBox="0 0 34 34" fill="none">
+            <rect x="2" y="2" width="13" height="13" rx="3" fill="#6C3FE8" />
+            <rect
+              x="19"
+              y="2"
+              width="13"
+              height="13"
+              rx="3"
+              fill="#6C3FE8"
+              opacity="0.5"
+            />
+            <rect
+              x="2"
+              y="19"
+              width="13"
+              height="13"
+              rx="3"
+              fill="#6C3FE8"
+              opacity="0.5"
+            />
+            <rect
+              x="19"
+              y="19"
+              width="13"
+              height="13"
+              rx="3"
+              fill="#6C3FE8"
+              opacity="0.25"
+            />
+          </svg>
+          Servicesnap
+        </a>
+        <ul class="navbar-nav flex-row d-none d-lg-flex">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        <!-- Desktop nav links -->
+        <div class="desktop-nav-items d-flex align-items-center gap-1">
+          <div class="search-wrap ms-2">
+            <span class="search-icon">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+                <circle
+                  cx="8.5"
+                  cy="8.5"
+                  r="5.5"
+                  stroke="#aaa"
+                  stroke-width="2"
+                />
+                <path
+                  d="M13 13L17 17"
+                  stroke="#aaa"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <input
+              type="text"
+              class="search-box"
+              placeholder="Search for services..."
+            />
+          </div>
+
+          <button class="btn-login ms-2">Log in</button>
+          <a href="become-seller.html">
+             <button class="btn-seller ms-1">Become a Seller</button>
+          </a>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler" id="hamburgerBtn" aria-label="Open menu">
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </nav>
+    <!-- ────────────── Navbar Section End ────────────── -->
+
+    <!-- ────────────── Drawer Overlay ────────────── -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- ────────────── Mobile Drawer Start ────────────── -->
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="drawer-header">
+        <a href="#" class="navbar-brand" style="font-size: 1.15rem">
+          <svg width="28" height="28" viewBox="0 0 34 34" fill="none">
+            <rect x="2" y="2" width="13" height="13" rx="3" fill="#6C3FE8" />
+            <rect
+              x="19"
+              y="2"
+              width="13"
+              height="13"
+              rx="3"
+              fill="#6C3FE8"
+              opacity="0.5"
+            />
+            <rect
+              x="2"
+              y="19"
+              width="13"
+              height="13"
+              rx="3"
+              fill="#6C3FE8"
+              opacity="0.5"
+            />
+            <rect
+              x="19"
+              y="19"
+              width="13"
+              height="13"
+              rx="3"
+              fill="#6C3FE8"
+              opacity="0.25"
+            />
+          </svg>
+          Servify
+        </a>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
+
+      <div class="drawer-search mt-2">
+        <input type="text" placeholder="Search for services..." />
+      </div>
+
+      <nav class="drawer-nav">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="drawer-footer">
+        <a href="#" class="btn-login-full">Log in</a>
+        <a href="#" class="btn-seller-full">Become a Seller</a>
+      </div>
+    </aside>
+    <!-- ────────────── Mobile Drawer End ────────────── -->
+
+
+    <!-- ───────────── Footer Section Start ──────────── -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4 footer-brand-col mb-4 mb-lg-0">
+            <div class="footer-brand">
+              <svg
+                class="stack-icon"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 22L16 28L28 22"
+                  stroke="#5b3fc4"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4 16L16 22L28 16"
+                  stroke="#5b3fc4"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4 10L16 16L28 10L16 4L4 10Z"
+                  stroke="#5b3fc4"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="brand-name">Servicesnap</span>
+            </div>
+            <p class="footer-tagline">
+              The premium multi-vendor marketplace for finding expert services
+              easily. Join thousands of satisfied customers and top-tier
+              providers today.
+            </p>
+          </div>
+
+          <div class="col-lg-1 d-none d-lg-block"></div>
+
+          <!-- Platform -->
+          <div class="col-6 col-sm-4 col-lg-2 footer-col mb-4 mb-lg-0">
+            <div class="footer-col-title">Platform</div>
+            <ul class="footer-nav-list">
+              <li><a href="#">Browse Services</a></li>
+              <li><a href="#">Top Providers</a></li>
+              <li><a href="#">How it Works</a></li>
+              <li><a href="#">Trust &amp; Safety</a></li>
+            </ul>
+          </div>
+
+          <!-- For Sellers -->
+          <div class="col-6 col-sm-4 col-lg-2 footer-col mb-4 mb-lg-0">
+            <div class="footer-col-title">For Sellers</div>
+            <ul class="footer-nav-list">
+              <li><a href="#">Become a Seller</a></li>
+              <li><a href="#">Seller Dashboard</a></li>
+              <li><a href="#">Seller Guidelines</a></li>
+              <li><a href="#">Success Stories</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="col-6 col-sm-4 col-lg-2 footer-col mb-4 mb-lg-0">
+            <div class="footer-col-title">Company</div>
+            <ul class="footer-nav-list">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact Support</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 Servicesnap. All rights reserved.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ───────────── Footer Section End ──────────── -->
+
+    <!-- ───────────── Back to Top Button ───────────── -->
+    <button id="backToTop" aria-label="Back to top">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
