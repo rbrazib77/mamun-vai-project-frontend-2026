@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serfixo – Find the Perfect Professional</title>
+    <!-- Fontawesome CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Main Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ════════ STICKY HEADER ════════ -->
+    <div id="site-header">
+      <div class="top-bar">
+        <div class="container">
+          <a href="index.html" class="logo-wrap">
+            <span class="logo-icon">🏪</span>
+            <span class="logo-bd">SERFIXO</span><span class="logo-stall"></span>
+          </a>
+          <div class="search-wrap">
+            <input type="text" placeholder="Search Service..." />
+            <button>Search</button>
+          </div>
+          <div class="top-right">
+            <a href="#">
+              <button class="btn-login">Login</button>
+            </a>
+            <a href="registrationvendor.html">
+              <button class="btn-login">Become Seller</button>
+            </a>
+          </div>
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- DESKTOP NAV -->
+      <nav class="nav-bar">
+        <div class="container">
+          <ul>
+            <!-- 1 Computer -->
+            <li>
+              <a href="#">Web & Software Development</a>
+            </li>
+            <li>
+              <a href="#">Healthcare</a>
+            </li>
+            <li>
+              <a href="#">Utility</a>
+            </li>
+            <li>
+              <a href="#">Food and Grocery</a>
+            </li>
+
+            <li>
+              <a href="#">Transportation</a>
+            </li>
+
+            <li>
+              <a href="#">Cleaning and Maintenance</a>
+            </li>
+
+            <li>
+              <a href="#">Financial</a>
+            </li>
+
+            <li>
+              <a href="#">Childcare and Education</a>
+            </li>
+
+            <!-- More -->
+            <li>
+              <a href="#">More <i class="bi bi-chevron-down arrow"></i></a>
+              <ul class="dd1">
+                <li>
+                  <a href="#">Fitness and Wellness</a>
+                </li>
+                <li>
+                  <a href="#">Event Management and Entertainment</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- /site-header -->
+
+    <!-- ════════ OFF-CANVAS (RIGHT SIDE, MOBILE) ════════ -->
+    <div class="offcanvas-overlay" id="overlay"></div>
+    <div class="offcanvas-menu" id="offcanvasMenu">
+      <div class="offcanvas-head">
+        <span>🏪 Snap</span>
+        <button class="offcanvas-close" id="closeBtn">&times;</button>
+      </div>
+
+      <div class="offcanvas-search">
+        <input type="text" placeholder="Search products..." />
+        <button>Go</button>
+      </div>
+
+      <ul class="mob-nav">
+        <!-- Computer -->
+        <li>
+          <button class="mob-lv1">
+            <span
+              ><i class="bi bi-pc-display micon"></i>Web & Software
+              Development</span
+            >
+          </button>
+        </li>
+
+        <!-- Electronics -->
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-phone micon"></i>Healthcare</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-shield-check micon"></i>Utility</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-airplane micon"></i>Food and Grocery</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-heart-pulse micon"></i>Transportation</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span
+              ><i class="bi bi-house micon"></i>Cleaning and Maintenance</span
+            >
+          </button>
+        </li>
+
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-bicycle micon"></i>Car &amp; Bike</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-building micon"></i>Real Estate</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-grid micon"></i>More</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="mob-lv1 mob-sell">
+            <span><i class="bi bi-tag micon"></i>Sell Item</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-person micon"></i>Login</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <section class="vendor-registration-section">
+  <div class="container">
+    <div class="registration-wrapper">
+      <div class="row g-0">
+        
+        <div class="col-md-5 col-lg-4 steps-sidebar d-flex flex-column justify-content-center">
+          <div class="sidebar-logo">SERFIXO</div>
+
+          <div class="step-item d-flex align-items-start">
+            <div class="step-icon-box d-flex align-items-center justify-content-center">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <div>
+              <h5 class="step-title">Register in online</h5>
+              <p class="step-desc">Properly fillup the registration form below</p>
+            </div>
+          </div>
+
+          <div class="step-item d-flex align-items-start">
+            <div class="step-icon-box d-flex align-items-center justify-content-center">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div>
+              <h5 class="step-title">Get a contract paper</h5>
+              <p class="step-desc">After fillup the online form, we will send a contract paper.</p>
+            </div>
+          </div>
+
+          <div class="step-item d-flex align-items-start">
+            <div class="step-icon-box d-flex align-items-center justify-content-center">
+              <i class="fas fa-pen-to-square"></i>
+            </div>
+            <div>
+              <h5 class="step-title">Sign the contract</h5>
+              <p class="step-desc">Sign the contract for confirm</p>
+            </div>
+          </div>
+
+          <div class="step-item mb-0 d-flex align-items-start">
+            <div class="step-icon-box d-flex align-items-center justify-content-center">
+              <i class="fas fa-mobile-screen-button"></i>
+            </div>
+            <div>
+              <h5 class="step-title">You are in LIVE NOW</h5>
+              <p class="step-desc">You are now LIVE. It's time to add packages</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7 col-lg-8 form-content-area">
+          <h2 class="form-main-heading">Registration for</h2>
+          <h2 class="form-sub-heading">Vendor/service provider</h2>
+          <div class="heading-divider"></div>
+
+          <form action="">
+            <div class="row">
+              <div class="col-sm-6 mb-3">
+                <label for="firstName" class="custom-form-label">Full Name</label>
+                <input type="text" class="form-control py-2" id="firstName" placeholder="Sakib" required />
+              </div>
+              <div class="col-sm-6 mb-3">
+                <label for="lastName" class="custom-form-label">Company Name</label>
+                <input type="text" class="form-control py-2" id="lastName" placeholder="Iqbal" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 mb-3">
+                <label for="emailAddress" class="custom-form-label">E-mail</label>
+                <input type="email" class="form-control py-2" id="emailAddress" placeholder="E-mail" required />
+              </div>
+              <div class="col-sm-6 mb-3">
+                <label for="phoneNumber" class="custom-form-label">Phone Number</label>
+                <input type="text" class="form-control py-2" id="phoneNumber" placeholder="Phone Number" required />
+              </div>
+            </div>
+            
+            <div class="row mb-4">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="password" class="custom-form-label">Password</label>
+                <input type="password" class="form-control py-2" id="password" placeholder="******" required />
+              </div>
+              <div class="col-sm-6">
+                <label for="confirmPassword" class="custom-form-label">Confirm Password</label>
+                <input type="password" class="form-control py-2" id="confirmPassword" placeholder="******" required />
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-custom-submit">
+              Create Seller Account
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- ───────────── Footer Section Start ──────────── -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4 footer-brand-col mb-4 mb-lg-0">
+            <div class="footer-brand">
+              <svg
+                class="stack-icon"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 22L16 28L28 22"
+                  stroke="#5b3fc4"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4 16L16 22L28 16"
+                  stroke="#5b3fc4"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4 10L16 16L28 10L16 4L4 10Z"
+                  stroke="#5b3fc4"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="brand-name">SERFIXO</span>
+            </div>
+            <p class="footer-tagline">
+              The premium multi-vendor marketplace for finding expert services
+              easily. Join thousands of satisfied customers and top-tier
+              providers today.
+            </p>
+          </div>
+
+          <div class="col-lg-1 d-none d-lg-block"></div>
+
+          <!-- Platform -->
+          <div class="col-6 col-sm-4 col-lg-2 footer-col mb-4 mb-lg-0">
+            <div class="footer-col-title">Platform</div>
+            <ul class="footer-nav-list">
+              <li><a href="#">Browse Services</a></li>
+              <li><a href="#">Top Providers</a></li>
+              <li><a href="#">How it Works</a></li>
+              <li><a href="#">Trust &amp; Safety</a></li>
+            </ul>
+          </div>
+
+          <!-- For Sellers -->
+          <div class="col-6 col-sm-4 col-lg-2 footer-col mb-4 mb-lg-0">
+            <div class="footer-col-title">For Sellers</div>
+            <ul class="footer-nav-list">
+              <li><a href="#">Become a Seller</a></li>
+              <li><a href="#">Seller Dashboard</a></li>
+              <li><a href="#">Seller Guidelines</a></li>
+              <li><a href="#">Success Stories</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="col-6 col-sm-4 col-lg-2 footer-col mb-4 mb-lg-0">
+            <div class="footer-col-title">Company</div>
+            <ul class="footer-nav-list">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact Support</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 Servicesnap. All rights reserved.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ───────────── Footer Section End ──────────── -->
+
+    <!-- ───────────── Back to Top Button ───────────── -->
+    <button id="backToTop" aria-label="Back to top">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js"></script>
+    <script>
+      const track = document.getElementById("sliderTrack");
+      const arrowLeft = document.getElementById("arrowLeft");
+      const arrowRight = document.getElementById("arrowRight");
+
+      const scrollAmount = 220;
+
+      function updateArrows() {
+        const scrollLeft = track.scrollLeft;
+        const maxScroll = track.scrollWidth - track.clientWidth;
+
+        // Left arrow: hide when at start
+        arrowLeft.classList.toggle("hidden", scrollLeft <= 2);
+        // Right arrow: hide when at end
+        arrowRight.classList.toggle("hidden", scrollLeft >= maxScroll - 2);
+      }
+
+      arrowLeft.addEventListener("click", () => {
+        track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      arrowRight.addEventListener("click", () => {
+        track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+
+      track.addEventListener("scroll", updateArrows);
+      window.addEventListener("resize", updateArrows);
+
+      // Active item click
+      document.querySelectorAll(".cat-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          document
+            .querySelectorAll(".cat-item")
+            .forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+
+      // Init
+      updateArrows();
+    </script>
+    <script>
+      const heroSwiper = new Swiper(".heroSwiper", {
+        loop: true,
+        speed: 700,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        navigation: {
+          nextEl: ".hero-swiper-next",
+          prevEl: ".hero-swiper-prev",
+        },
+        pagination: {
+          el: ".hero-swiper-pagination",
+          clickable: true,
+        },
+        effect: "slide",
+        grabCursor: true,
+        keyboard: {
+          enabled: true,
+        },
+        a11y: {
+          prevSlideMessage: "Previous slide",
+          nextSlideMessage: "Next slide",
+        },
+      });
+    </script>
+  </body>
+</html>
