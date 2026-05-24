@@ -39,13 +39,16 @@ body {
 
 .top-bar {
   background: #fff;
-  padding: 8px 0;
+  padding: 15px 0;
 }
+
 .top-bar .container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 20px; 
 }
+
 .logo-wrap {
   display: flex;
   align-items: center;
@@ -56,25 +59,28 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
 }
+
 .logo-icon {
   font-size: 22px;
   margin-right: 4px;
 }
-.logo-bd {
-  color: var(--purple);
-  font-size: 22px;
-  font-weight: 800;
-}
+
+.logo-bd,
 .logo-stall {
   color: var(--purple);
   font-size: 22px;
   font-weight: 800;
 }
+
+/* সার্চ বক্সটিকে মাঝখানে বড় ও সুন্দর দেখানোর জন্য margin প্রোপার্টি ব্যবহার করা হয়েছে */
 .search-wrap {
   flex: 1;
   display: flex;
   max-width: 560px;
+  margin: 0 auto; /* লোগো ও বাটনের ঠিক মাঝখানে পজিশন করার জন্য */
+  width: 100%;
 }
+
 .search-wrap input {
   border: 1px solid #ccc;
   border-right: none;
@@ -84,6 +90,7 @@ body {
   width: 100%;
   font-size: 14px;
 }
+
 .search-wrap button {
   background: var(--purple);
   color: #fff;
@@ -94,14 +101,15 @@ body {
   font-size: 14px;
   font-weight: 600;
 }
+
 .search-wrap button:hover {
   background: var(--purple);
 }
+
 .top-right {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: auto;
   flex-shrink: 0;
 }
 
@@ -115,6 +123,7 @@ body {
   color: #fff;
   font-weight: 600;
 }
+
 .btn-login:hover {
   background: var(--purple-dark);
 }
@@ -135,6 +144,7 @@ body {
   color: var(--purple) !important;
   cursor: pointer;
 }
+
 /* --Topbar section End-- */
 
 /* ═══════════════════════════════════════ DESKTOP NAV + DROPDOWN + SUB-DROPDOWN ═══════════════════════════════════════ */
@@ -142,6 +152,7 @@ body {
   background: var(--purple);
   position: relative;
   z-index: 100;
+  padding: 5px 0px;
 }
 .nav-bar > .container > ul {
   list-style: none;

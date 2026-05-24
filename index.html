@@ -19,82 +19,63 @@
   </head>
   <body>
     <!-- ════════ STICKY HEADER ════════ -->
-    <div id="site-header">
+   <div id="site-header">
       <div class="top-bar">
         <div class="container">
           <a href="index.html" class="logo-wrap">
             <span class="logo-icon">🏪</span>
             <span class="logo-bd">SERFIXO</span><span class="logo-stall"></span>
           </a>
-          <div class="search-wrap">
-            <input type="text" placeholder="Search Service..." />
-            <button>Search</button>
+          <div class="search-wrap input-group d-none d-md-flex">
+            <input type="text" class="form-control" placeholder="Search Service..." aria-label="Search Service">
+            <button class="btn btn-purple" type="button">Search</button>
           </div>
+
+          <!-- ডানপাশের বাটন সমূহ -->
           <div class="top-right">
             <a href="#">
               <button class="btn-login">Login</button>
             </a>
-             <a href="registrationvendor.html">
+            <a href="registrationvendor.html">
               <button class="btn-login">Become Seller</button>
             </a>
           </div>
+          
           <button class="hamburger-btn" id="hamburgerBtn">
             <i class="bi bi-list"></i>
           </button>
         </div>
       </div>
 
-      <!-- DESKTOP NAV -->
-      <nav class="nav-bar">
-        <div class="container">
-          <ul>
-            <!-- 1 Computer -->
-            <li>
-              <a href="#">Web & Software Development</a>
-            </li>
-            <li>
-              <a href="#">Healthcare</a>
-            </li>
-            <li>
-              <a href="#">Utility</a>
-            </li>
-            <li>
-              <a href="#">Food and Grocery</a>
-            </li>
-
-            <li>
-              <a href="#">Transportation</a>
-            </li>
-
-            <li>
-              <a href="#">Cleaning and Maintenance</a>
-            </li>
-
-            <li>
-              <a href="#">Financial</a>
-            </li>
-
-            <li>
-              <a href="#">Childcare and Education</a>
-            </li>
-
-            <!-- More -->
-            <li>
-              <a href="#">More <i class="bi bi-chevron-down arrow"></i></a>
-              <ul class="dd1">
-                <li>
-                  <a href="#">Fitness and Wellness</a>
-                </li>
-                <li>
-                  <a href="#">Event Management and Entertainment</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <!-- /site-header -->
+    <!-- DESKTOP NAV -->
+    <nav class="nav-bar">
+      <div class="container">
+        <ul>
+          <li><a href="#">Web & Software Development</a></li>
+          <li><a href="#">Healthcare</a></li>
+          <li><a href="#">Utility</a></li>
+          <li><a href="#">Food and Grocery</a></li>
+          <li><a href="#">Transportation</a></li>
+          <li><a href="#">Cleaning and Maintenance</a></li>
+          <li><a href="#">Financial</a></li>
+          <li><a href="#">Childcare and Education</a></li>
+          <li>
+            <a href="#">More <i class="bi bi-chevron-down arrow"></i></a>
+            <ul class="dd1">
+              <li><a href="#">Fitness and Wellness</a></li>
+              <li><a href="#">Event Management and Entertainment</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="search-wrap input-group d-md-none d-flex p-2 mt-3">
+    <input type="text" class="form-control" placeholder="Search Service..." aria-label="Search Service">
+    <button class="btn btn-purple" type="button">Search</button>
+  </div>
+  
+  
 
     <!-- ════════ OFF-CANVAS (RIGHT SIDE, MOBILE) ════════ -->
     <div class="offcanvas-overlay" id="overlay"></div>
@@ -194,6 +175,7 @@
         </li>
       </ul>
     </div>
+    
 
     <!-- ────────────── Hero Section Start ────────────── -->
     <section class="hero-section">
