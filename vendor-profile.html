@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serfixo – Find the Perfect Professional</title>
+    <!-- Fontawesome CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Main Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ════════ STICKY HEADER ════════ -->
+    <div id="site-header">
+      <div class="top-bar">
+        <div class="container">
+          <a href="index.html" class="logo-wrap">
+            <span class="logo-icon">🏪</span>
+            <span class="logo-bd">SERFIXO</span><span class="logo-stall"></span>
+          </a>
+          <div class="search-wrap input-group d-none d-md-flex">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search Service..."
+              aria-label="Search Service"
+            />
+            <button class="btn btn-purple" type="button">Search</button>
+          </div>
+
+          <!-- ডানপাশের বাটন সমূহ -->
+          <div class="top-right">
+            <a href="#">
+              <button class="btn-login">Login</button>
+            </a>
+            <a href="registrationvendor.html">
+              <button class="btn-login">Become Seller</button>
+            </a>
+          </div>
+
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- DESKTOP NAV -->
+      <nav class="nav-bar">
+        <div class="container">
+          <ul>
+            <li><a href="#">Web & Software Development</a></li>
+            <li><a href="#">Healthcare</a></li>
+            <li><a href="#">Utility</a></li>
+            <li><a href="#">Food and Grocery</a></li>
+            <li><a href="#">Transportation</a></li>
+            <li><a href="#">Cleaning and Maintenance</a></li>
+            <li><a href="#">Financial</a></li>
+            <li><a href="#">Childcare and Education</a></li>
+            <li>
+              <a href="#">More <i class="bi bi-chevron-down arrow"></i></a>
+              <ul class="dd1">
+                <li><a href="#">Fitness and Wellness</a></li>
+                <li><a href="#">Event Management and Entertainment</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="search-wrap input-group d-md-none d-flex p-2 mt-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search Service..."
+        aria-label="Search Service"
+      />
+      <button class="btn btn-purple" type="button">Search</button>
+    </div>
+
+    <!-- ════════ OFF-CANVAS (RIGHT SIDE, MOBILE) ════════ -->
+    <div class="offcanvas-overlay" id="overlay"></div>
+    <div class="offcanvas-menu" id="offcanvasMenu">
+      <div class="offcanvas-head">
+        <span>🏪 Snap</span>
+        <button class="offcanvas-close" id="closeBtn">&times;</button>
+      </div>
+
+      <div class="offcanvas-search">
+        <input type="text" placeholder="Search products..." />
+        <button>Go</button>
+      </div>
+
+      <ul class="mob-nav">
+        <!-- Computer -->
+        <li>
+          <button class="mob-lv1">
+            <span
+              ><i class="bi bi-pc-display micon"></i>Web & Software
+              Development</span
+            >
+          </button>
+        </li>
+
+        <!-- Electronics -->
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-phone micon"></i>Healthcare</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-shield-check micon"></i>Utility</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-airplane micon"></i>Food and Grocery</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-heart-pulse micon"></i>Transportation</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span
+              ><i class="bi bi-house micon"></i>Cleaning and Maintenance</span
+            >
+          </button>
+        </li>
+
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-bicycle micon"></i>Car &amp; Bike</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-building micon"></i>Real Estate</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="mob-lv1 mob-sell">
+            <span><i class="bi bi-tag micon"></i>Sell Item</span>
+          </button>
+        </li>
+        <li>
+          <button class="mob-lv1">
+            <span><i class="bi bi-person micon"></i>Login</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <style>
+      :root {
+        --primary-color: #00b6a7;
+        --accent-color: #f37367;
+        --text-dark: #0f172a;
+        --text-muted: #64748b;
+        --bg-light: #f8fafc;
+        --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      }
+
+      .vendor-profile {
+        background-color: #f4f7fa;
+        padding-top: 180px;
+      }
+      .vendor-shop-profile-smart-card {
+        background: #fff;
+        border-radius: 24px;
+        border: none;
+        box-shadow: var(--card-shadow);
+        padding: 24px;
+        margin-bottom: 24px;
+      }
+      .vendor-shop-profile-banner-wrapper {
+        position: relative;
+        border-radius: 20px 20px 0 0;
+        overflow: hidden;
+        height: 200px;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      }
+
+      .vendor-shop-profile-banner-overlay-bg {
+        position: absolute;
+        inset: 0;
+        opacity: 0.15;
+        background-image: radial-gradient(#fff 1px, transparent 0);
+        background-size: 24px 24px;
+      }
+
+      .vendor-shop-profile-info-area {
+        position: relative;
+        background: #fff;
+        border-radius: 0 0 20px 20px;
+        padding: 24px 30px;
+        z-index: 2;
+      }
+
+      .vendor-shop-profile-logo-box {
+        width: 110px;
+        height: 110px;
+        border-radius: 28px;
+        border: 5px solid #fff;
+        background: #0f172a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -55px;
+        left: 40px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .vendor-shop-profile-details {
+        padding-left: 140px;
+      }
+
+      .vendor-shop-profile-social-icons a {
+        font-size: 18px;
+        margin-left: 12px;
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #f1f5f9;
+        color: var(--text-muted);
+        transition: all 0.2s ease;
+      }
+      .vendor-shop-profile-social-icons a:hover {
+        background: var(--text-dark);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      .vendor-shop-profile-meta-info-grid {
+        display: flex;
+        gap: 30px;
+        margin-top: 15px;
+      }
+
+      .vendor-shop-profile-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: var(--text-muted);
+      }
+
+      .vendor-shop-profile-meta-item i {
+        font-size: 16px;
+      }
+
+      .owner-card {
+        background: #fff;
+        border-radius: 24px;
+        border: none;
+        box-shadow: var(--card-shadow);
+        padding: 24px;
+        text-align: center;
+      }
+      .owner-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--text-muted);
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      .owner-img-box img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 16px;
+        margin-bottom: 12px;
+      }
+
+      .vendor-shop-section-title-area h4 {
+        font-weight: 800;
+        color: var(--text-dark);
+        margin: 0;
+      }
+      .vendor-shop-section-title-area p {
+        color: var(--text-muted);
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .vendor-shop-search-filter-box {
+        position: relative;
+        min-width: 260px;
+      }
+      .vendor-shop-search-filter-box input {
+        border-radius: 14px;
+        padding-right: 40px;
+        font-size: 14px;
+        background-color: #fff;
+        border: 1px solid #e2e8f0;
+        height: 44px;
+      }
+      .vendor-shop-search-filter-box i {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-muted);
+      }
+
+      .product-card {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid #f1f5f9;
+        padding: 20px;
+        text-align: center;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+      }
+      .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+        border-color: #e2e8f0;
+      }
+      .product-img-wrapper {
+        background: #f8fafc;
+        border-radius: 16px;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+      .product-img {
+        height: 110px;
+        object-fit: contain;
+      }
+      .product-title {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: var(--text-dark);
+      }
+      .rating-box {
+        color: #ffbc0b;
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+      .rating-count {
+        color: var(--text-muted);
+        font-weight: 500;
+      }
+      .product-price {
+        color: var(--text-dark);
+        font-weight: 800;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      /* রেসপন্সিভ মোবাইল ভিউ */
+      @media (max-width: 768px) {
+        .vendor-logo-box {
+          position: relative;
+          top: -40px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .vendor-details {
+          padding-left: 0;
+          text-align: center;
+          margin-top: -20px;
+        }
+        .profile-header-top {
+          flex-direction: column;
+          align-items: center !important;
+          gap: 15px;
+        }
+        .meta-info-grid {
+          flex-direction: column;
+          gap: 12px;
+          align-items: center;
+        }
+        .filter-row {
+          flex-direction: column;
+          align-items: start !important;
+          gap: 15px;
+        }
+        .search-filter-box,
+        .select-box-wrapper,
+        .select-filter {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+
+    <section class="vendor-profile">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-9">
+            <div
+              class="vendor-shop-profile-smart-card p-0 overflow-hidden"
+              style="border-radius: 20px"
+            >
+              <div class="vendor-shop-profile-banner-wrapper">
+                <div class="vendor-shop-profile-banner-overlay-bg"></div>
+              </div>
+
+              <div class="vendor-shop-profile-info-area">
+                <div class="vendor-shop-profile-logo-box">
+                  <span
+                    style="
+                      color: #fff;
+                      font-size: 32px;
+                      font-weight: 800;
+                      letter-spacing: -1px;
+                    "
+                    >R<span style="color: var(--primary-color); font-size: 14px"
+                      >+d</span
+                    ></span
+                  >
+                </div>
+
+                <div class="vendor-shop-profile-details">
+                  <div
+                    class="d-flex justify-content-between align-items-start profile-header-top"
+                  >
+                    <div>
+                      <h3 class="fw-bold mb-1">Raymour</h3>
+                      <p class="text-muted small mb-0">
+                        Home of modern & stylish furniture.
+                      </p>
+                    </div>
+                    <div class="vendor-shop-profile-social-icons">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-3"
+                  >
+                    <div class="vendor-shop-profile-meta-info-grid">
+                      <div class="vendor-shop-profile-meta-item">
+                        <i class="fas fa-map-marker-alt text-danger"></i>
+                        <span>Illinois, USA</span>
+                      </div>
+                      <div class="vendor-shop-profile-meta-item">
+                        <i class="far fa-calendar-alt text-info"></i>
+                        <span>Joined Oct 2021</span>
+                      </div>
+                      <div class="vendor-shop-profile-meta-item">
+                        <i class="fas fa-box text-warning"></i>
+                        <span>230 Products</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="owner-card">
+              <div class="owner-title">Shop Owner</div>
+              <div class="owner-img-box">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+                  alt="Owner"
+                />
+              </div>
+              <h6 class="fw-bold m-0" style="color: var(--text-dark)">
+                Jhon Doe
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="vendor-shop-profile-smart-card mt-4">
+          <div
+            class="d-flex justify-content-between align-items-center flex-wrap pb-4 mb-4 border-bottom filter-row"
+          >
+            <div class="vendor-shop-section-title-area">
+              <h4>All Services</h4>
+              <p>Explore premium Services from Raymour</p>
+            </div>
+
+            <div
+              class="d-flex align-items-center gap-2 flex-wrap select-box-wrapper"
+            >
+              <div class="vendor-shop-search-filter-box">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search in this service..."
+                />
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid" id="grid">
+            <!-- Card 1 -->
+            <div class="card visible">
+              <div class="img-wrap">
+                <img
+                  class="card-img"
+                  src="assets/images/website.png"
+                  alt="Web Development"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-title">Web Development</div>
+                <div class="card-desc">
+                  Custom websites, dynamic web applications, and technical
+                  solutions built by expert developers to elevate your brand
+                  online.
+                </div>
+                <button class="btn-learn">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card visible">
+              <div class="img-wrap">
+                <img
+                  class="card-img"
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+                  alt="Digital Marketing"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-title">Healthcare</div>
+                <div class="card-desc">
+                  Comprehensive SEO, social media management, and targeted ad
+                  campaigns designed to grow your audience and increase revenue.
+                </div>
+                <button class="btn-learn">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card visible">
+              <div class="img-wrap">
+                <img
+                  class="card-img"
+                  src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80"
+                  alt="UI/UX Design"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-title">Utility</div>
+                <div class="card-desc">
+                  Beautiful, intuitive, and user-centric interfaces crafted to
+                  provide exceptional digital experiences across all devices.
+                </div>
+                <button class="btn-learn">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card visible">
+              <div class="img-wrap">
+                <img
+                  class="card-img"
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                  alt="Home Cleaning"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-title">Food and Grocery</div>
+                <div class="card-desc">
+                  Reliable and thorough residential cleaning services to keep
+                  your living spaces spotless, fresh, and comfortable all year
+                  round.
+                </div>
+                <button class="btn-learn">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card visible">
+              <div class="img-wrap">
+                <img
+                  class="card-img"
+                  src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80"
+                  alt="Plumbing Services"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-title">Transportation</div>
+                <div class="card-desc">
+                  Fast, professional plumbing repairs and installations from
+                  licensed experts to ensure your home runs smoothly without
+                  leaks.
+                </div>
+                <button class="btn-learn">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card visible">
+              <div class="img-wrap">
+                <img
+                  class="card-img"
+                  src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=600&q=80"
+                  alt="Professional Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-title">Cleaning and Maintenance</div>
+                <div class="card-desc">
+                  High-quality photography services for events, portraits, and
+                  commercial products, capturing perfect moments with creative
+                  flair.
+                </div>
+                <button class="btn-learn">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Card 7 (hidden) -->
+            <div class="card extra">
+              <div class="img-wrap">
+                <img
+                  class="card-img"
+                  src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80"
+                  alt="Video Editing"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-title">Video Editing</div>
+                <div class="card-desc">
+                  Professional video editing and post-production for
+                  commercials, social media, weddings and corporate content.
+                </div>
+                <button class="btn-learn">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Card 8 (hidden) -->
+            <div class="card extra">
+              <div class="img-wrap">
+                <img
+                  class="card-img"
+                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80"
+                  alt="Business Consulting"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-title">Business Consulting</div>
+                <div class="card-desc">
+                  Strategic consulting to optimize your operations, drive
+                  growth, and solve your toughest organizational challenges.
+                </div>
+                <button class="btn-learn">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Card 9 (hidden) -->
+            <div class="card extra">
+              <div class="img-wrap">
+                <img
+                  class="card-img"
+                  src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=600&q=80"
+                  alt="IT Support"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-title">IT Support</div>
+                <div class="card-desc">
+                  Reliable IT support and managed services for businesses of all
+                  sizes, keeping your systems secure, fast and always online.
+                </div>
+                <button class="btn-learn">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Footer Section Start ──────────── -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4 footer-brand-col mb-4 mb-lg-0">
+            <div class="footer-brand">
+              <svg
+                class="stack-icon"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 22L16 28L28 22"
+                  stroke="#5b3fc4"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4 16L16 22L28 16"
+                  stroke="#5b3fc4"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4 10L16 16L28 10L16 4L4 10Z"
+                  stroke="#5b3fc4"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="brand-name">SERFIXO</span>
+            </div>
+            <p class="footer-tagline">
+              The premium multi-vendor marketplace for finding expert services
+              easily. Join thousands of satisfied customers and top-tier
+              providers today.
+            </p>
+          </div>
+
+          <div class="col-lg-1 d-none d-lg-block"></div>
+
+          <!-- Platform -->
+          <div class="col-6 col-sm-4 col-lg-2 footer-col mb-4 mb-lg-0">
+            <div class="footer-col-title">Platform</div>
+            <ul class="footer-nav-list">
+              <li><a href="#">Browse Services</a></li>
+              <li><a href="#">Top Providers</a></li>
+              <li><a href="#">How it Works</a></li>
+              <li><a href="#">Trust &amp; Safety</a></li>
+            </ul>
+          </div>
+
+          <!-- For Sellers -->
+          <div class="col-6 col-sm-4 col-lg-2 footer-col mb-4 mb-lg-0">
+            <div class="footer-col-title">For Sellers</div>
+            <ul class="footer-nav-list">
+              <li><a href="#">Become a Seller</a></li>
+              <li><a href="#">Seller Dashboard</a></li>
+              <li><a href="#">Seller Guidelines</a></li>
+              <li><a href="#">Success Stories</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="col-6 col-sm-4 col-lg-2 footer-col mb-4 mb-lg-0">
+            <div class="footer-col-title">Company</div>
+            <ul class="footer-nav-list">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact Support</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 Servicesnap. All rights reserved.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ───────────── Footer Section End ──────────── -->
+
+    <!-- ───────────── Back to Top Button ───────────── -->
+    <button id="backToTop" aria-label="Back to top">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js"></script>
+    <script>
+      const track = document.getElementById("sliderTrack");
+      const arrowLeft = document.getElementById("arrowLeft");
+      const arrowRight = document.getElementById("arrowRight");
+
+      const scrollAmount = 220;
+
+      function updateArrows() {
+        const scrollLeft = track.scrollLeft;
+        const maxScroll = track.scrollWidth - track.clientWidth;
+
+        // Left arrow: hide when at start
+        arrowLeft.classList.toggle("hidden", scrollLeft <= 2);
+        // Right arrow: hide when at end
+        arrowRight.classList.toggle("hidden", scrollLeft >= maxScroll - 2);
+      }
+
+      arrowLeft.addEventListener("click", () => {
+        track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      arrowRight.addEventListener("click", () => {
+        track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+
+      track.addEventListener("scroll", updateArrows);
+      window.addEventListener("resize", updateArrows);
+
+      // Active item click
+      document.querySelectorAll(".cat-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          document
+            .querySelectorAll(".cat-item")
+            .forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+
+      // Init
+      updateArrows();
+    </script>
+    <script>
+      const heroSwiper = new Swiper(".heroSwiper", {
+        loop: true,
+        speed: 700,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        navigation: {
+          nextEl: ".hero-swiper-next",
+          prevEl: ".hero-swiper-prev",
+        },
+        pagination: {
+          el: ".hero-swiper-pagination",
+          clickable: true,
+        },
+        effect: "slide",
+        grabCursor: true,
+        keyboard: {
+          enabled: true,
+        },
+        a11y: {
+          prevSlideMessage: "Previous slide",
+          nextSlideMessage: "Next slide",
+        },
+      });
+    </script>
+  </body>
+</html>
