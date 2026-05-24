@@ -26,10 +26,17 @@
             <span class="logo-icon">🏪</span>
             <span class="logo-bd">SERFIXO</span><span class="logo-stall"></span>
           </a>
-          <div class="search-wrap">
-            <input type="text" placeholder="Search Service..." />
-            <button>Search</button>
+          <div class="search-wrap input-group d-none d-md-flex">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search Service..."
+              aria-label="Search Service"
+            />
+            <button class="btn btn-purple" type="button">Search</button>
           </div>
+
+          <!-- ডানপাশের বাটন সমূহ -->
           <div class="top-right">
             <a href="#">
               <button class="btn-login">Login</button>
@@ -38,6 +45,7 @@
               <button class="btn-login">Become Seller</button>
             </a>
           </div>
+
           <button class="hamburger-btn" id="hamburgerBtn">
             <i class="bi bi-list"></i>
           </button>
@@ -48,53 +56,34 @@
       <nav class="nav-bar">
         <div class="container">
           <ul>
-            <!-- 1 Computer -->
-            <li>
-              <a href="#">Web & Software Development</a>
-            </li>
-            <li>
-              <a href="#">Healthcare</a>
-            </li>
-            <li>
-              <a href="#">Utility</a>
-            </li>
-            <li>
-              <a href="#">Food and Grocery</a>
-            </li>
-
-            <li>
-              <a href="#">Transportation</a>
-            </li>
-
-            <li>
-              <a href="#">Cleaning and Maintenance</a>
-            </li>
-
-            <li>
-              <a href="#">Financial</a>
-            </li>
-
-            <li>
-              <a href="#">Childcare and Education</a>
-            </li>
-
-            <!-- More -->
+            <li><a href="#">Web & Software Development</a></li>
+            <li><a href="#">Healthcare</a></li>
+            <li><a href="#">Utility</a></li>
+            <li><a href="#">Food and Grocery</a></li>
+            <li><a href="#">Transportation</a></li>
+            <li><a href="#">Cleaning and Maintenance</a></li>
+            <li><a href="#">Financial</a></li>
+            <li><a href="#">Childcare and Education</a></li>
             <li>
               <a href="#">More <i class="bi bi-chevron-down arrow"></i></a>
               <ul class="dd1">
-                <li>
-                  <a href="#">Fitness and Wellness</a>
-                </li>
-                <li>
-                  <a href="#">Event Management and Entertainment</a>
-                </li>
+                <li><a href="#">Fitness and Wellness</a></li>
+                <li><a href="#">Event Management and Entertainment</a></li>
               </ul>
             </li>
           </ul>
         </div>
       </nav>
     </div>
-    <!-- /site-header -->
+    <div class="search-wrap input-group d-md-none d-flex p-2 mt-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search Service..."
+        aria-label="Search Service"
+      />
+      <button class="btn btn-purple" type="button">Search</button>
+    </div>
 
     <!-- ════════ OFF-CANVAS (RIGHT SIDE, MOBILE) ════════ -->
     <div class="offcanvas-overlay" id="overlay"></div>
@@ -162,12 +151,6 @@
         </li>
 
         <li>
-          <button class="mob-lv1">
-            <span><i class="bi bi-grid micon"></i>More</span>
-          </button>
-        </li>
-
-        <li>
           <button class="mob-lv1 mob-sell">
             <span><i class="bi bi-tag micon"></i>Sell Item</span>
           </button>
@@ -181,103 +164,165 @@
     </div>
 
     <section class="vendor-registration-section">
-  <div class="container">
-    <div class="registration-wrapper">
-      <div class="row g-0">
-        
-        <div class="col-md-5 col-lg-4 steps-sidebar d-flex flex-column justify-content-center">
-          <div class="sidebar-logo">SERFIXO</div>
+      <div class="container">
+        <div class="registration-wrapper">
+          <div class="row g-0">
+            <div
+              class="col-md-5 col-lg-4 steps-sidebar d-flex flex-column justify-content-center order-2 order-md-1"
+            >
+              <div class="sidebar-logo">SERFIXO</div>
 
-          <div class="step-item d-flex align-items-start">
-            <div class="step-icon-box d-flex align-items-center justify-content-center">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            <div>
-              <h5 class="step-title">Register in online</h5>
-              <p class="step-desc">Properly fillup the registration form below</p>
-            </div>
-          </div>
+              <div class="step-item d-flex align-items-start">
+                <div
+                  class="step-icon-box d-flex align-items-center justify-content-center"
+                >
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <div>
+                  <h5 class="step-title">Register in online</h5>
+                  <p class="step-desc">
+                    Properly fillup the registration form below
+                  </p>
+                </div>
+              </div>
 
-          <div class="step-item d-flex align-items-start">
-            <div class="step-icon-box d-flex align-items-center justify-content-center">
-              <i class="fas fa-handshake"></i>
-            </div>
-            <div>
-              <h5 class="step-title">Get a contract paper</h5>
-              <p class="step-desc">After fillup the online form, we will send a contract paper.</p>
-            </div>
-          </div>
+              <div class="step-item d-flex align-items-start">
+                <div
+                  class="step-icon-box d-flex align-items-center justify-content-center"
+                >
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <div>
+                  <h5 class="step-title">Get a contract paper</h5>
+                  <p class="step-desc">
+                    After fillup the online form, we will send a contract paper.
+                  </p>
+                </div>
+              </div>
 
-          <div class="step-item d-flex align-items-start">
-            <div class="step-icon-box d-flex align-items-center justify-content-center">
-              <i class="fas fa-pen-to-square"></i>
-            </div>
-            <div>
-              <h5 class="step-title">Sign the contract</h5>
-              <p class="step-desc">Sign the contract for confirm</p>
-            </div>
-          </div>
+              <div class="step-item d-flex align-items-start">
+                <div
+                  class="step-icon-box d-flex align-items-center justify-content-center"
+                >
+                  <i class="fas fa-pen-to-square"></i>
+                </div>
+                <div>
+                  <h5 class="step-title">Sign the contract</h5>
+                  <p class="step-desc">Sign the contract for confirm</p>
+                </div>
+              </div>
 
-          <div class="step-item mb-0 d-flex align-items-start">
-            <div class="step-icon-box d-flex align-items-center justify-content-center">
-              <i class="fas fa-mobile-screen-button"></i>
+              <div class="step-item mb-0 d-flex align-items-start">
+                <div
+                  class="step-icon-box d-flex align-items-center justify-content-center"
+                >
+                  <i class="fas fa-mobile-screen-button"></i>
+                </div>
+                <div>
+                  <h5 class="step-title">You are in LIVE NOW</h5>
+                  <p class="step-desc">
+                    You are now LIVE. It's time to add packages
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h5 class="step-title">You are in LIVE NOW</h5>
-              <p class="step-desc">You are now LIVE. It's time to add packages</p>
+
+            <div class="col-md-7 col-lg-8 form-content-area order-1 order-md-2">
+              <h2 class="form-main-heading">Registration for</h2>
+              <h2 class="form-sub-heading">Vendor/service provider</h2>
+              <div class="heading-divider"></div>
+
+              <form action="">
+                <div class="row">
+                  <div class="col-sm-6 mb-3">
+                    <label for="firstName" class="custom-form-label"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control py-2"
+                      id="firstName"
+                      placeholder="Sakib"
+                      required
+                    />
+                  </div>
+                  <div class="col-sm-6 mb-3">
+                    <label for="lastName" class="custom-form-label"
+                      >Company Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control py-2"
+                      id="lastName"
+                      placeholder="Iqbal"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6 mb-3">
+                    <label for="emailAddress" class="custom-form-label"
+                      >E-mail</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control py-2"
+                      id="emailAddress"
+                      placeholder="E-mail"
+                      required
+                    />
+                  </div>
+                  <div class="col-sm-6 mb-3">
+                    <label for="phoneNumber" class="custom-form-label"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control py-2"
+                      id="phoneNumber"
+                      placeholder="Phone Number"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="password" class="custom-form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control py-2"
+                      id="password"
+                      placeholder="******"
+                      required
+                    />
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="confirmPassword" class="custom-form-label"
+                      >Confirm Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control py-2"
+                      id="confirmPassword"
+                      placeholder="******"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-custom-submit">
+                  Create Seller Account
+                </button>
+              </form>
             </div>
           </div>
         </div>
-
-        <div class="col-md-7 col-lg-8 form-content-area">
-          <h2 class="form-main-heading">Registration for</h2>
-          <h2 class="form-sub-heading">Vendor/service provider</h2>
-          <div class="heading-divider"></div>
-
-          <form action="">
-            <div class="row">
-              <div class="col-sm-6 mb-3">
-                <label for="firstName" class="custom-form-label">Full Name</label>
-                <input type="text" class="form-control py-2" id="firstName" placeholder="Sakib" required />
-              </div>
-              <div class="col-sm-6 mb-3">
-                <label for="lastName" class="custom-form-label">Company Name</label>
-                <input type="text" class="form-control py-2" id="lastName" placeholder="Iqbal" required />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-sm-6 mb-3">
-                <label for="emailAddress" class="custom-form-label">E-mail</label>
-                <input type="email" class="form-control py-2" id="emailAddress" placeholder="E-mail" required />
-              </div>
-              <div class="col-sm-6 mb-3">
-                <label for="phoneNumber" class="custom-form-label">Phone Number</label>
-                <input type="text" class="form-control py-2" id="phoneNumber" placeholder="Phone Number" required />
-              </div>
-            </div>
-            
-            <div class="row mb-4">
-              <div class="col-sm-6 mb-3 mb-sm-0">
-                <label for="password" class="custom-form-label">Password</label>
-                <input type="password" class="form-control py-2" id="password" placeholder="******" required />
-              </div>
-              <div class="col-sm-6">
-                <label for="confirmPassword" class="custom-form-label">Confirm Password</label>
-                <input type="password" class="form-control py-2" id="confirmPassword" placeholder="******" required />
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-custom-submit">
-              Create Seller Account
-            </button>
-          </form>
-        </div>
-
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- ───────────── Footer Section Start ──────────── -->
     <footer class="site-footer">
